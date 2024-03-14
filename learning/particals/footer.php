@@ -2,7 +2,6 @@
 <footer id="footer" class="bg-dark text-white py-5">
     <div class="container">
         <div class="row">
-
             <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-3">
                 <!-- ul.menu-footer>li*5>a -->
                 <ul class="menu-footer">
@@ -49,6 +48,9 @@
 
 <script type="text/javascript" src="./assets/slick-1.8.1/slick/slick.min.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+
+
 <script>
     jQuery(document).ready(function($) {
         $('.related-product').slick({
@@ -93,6 +95,25 @@
 
 
     
+</script>
+
+<script>
+    jQuery(document).ready(function($) { 
+        $("#checkoutForm").validate({
+            rules: {
+                email: {
+                    "required" :true,
+                    "number" :true
+                }
+            },
+            messages: {
+                email: {
+                    "required": "Vui lòng nhập email",
+                    "number": "Email không đúng định dạng",
+                }
+            }
+        });
+    });
 </script>
 
 </body>

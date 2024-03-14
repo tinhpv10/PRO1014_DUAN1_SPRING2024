@@ -2,7 +2,10 @@
 
 @import "../bootstrap-5.3.3/scss/bootstrap.scss";
 
+@import "global";
 @import "header";
 @import "footer";
 @import "single_product";
 @import "action-buttons";
+@import "cart";
+@import "validate";
