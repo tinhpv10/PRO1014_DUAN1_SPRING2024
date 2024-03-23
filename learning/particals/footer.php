@@ -98,22 +98,22 @@
 </script>
 
 <script>
-    jQuery(document).ready(function($) { 
-        $("#checkoutForm").validate({
-            rules: {
-                email: {
-                    "required" :true,
-                    "number" :true
-                }
-            },
-            messages: {
-                email: {
-                    "required": "Vui lòng nhập email",
-                    "number": "Email không đúng định dạng",
-                }
-            }
-        });
-    });
+    // jQuery(document).ready(function($) { 
+    //     $("#checkoutForm").validate({
+    //         rules: {
+    //             email: {
+    //                 "required" :true,
+    //                 "number" :true
+    //             }
+    //         },
+    //         messages: {
+    //             email: {
+    //                 "required": "Vui lòng nhập email",
+    //                 "number": "Email không đúng định dạng",
+    //             }
+    //         }
+    //     });
+    // });
 </script>
 
 </body>

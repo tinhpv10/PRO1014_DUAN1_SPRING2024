@@ -1,28 +1,33 @@
-<?php include "particals/header.php"; ?>
+<?php
+require_once './variable.php';
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
+
+if(sizeof($_POST) > 0){
+    //xử lý việc đặt hàng
+
+    require_once "./heplers/mail.php";
+}
+
+
+include "particals/header.php"; ?>
 
 <section class="checkout py-5">
     <div class="container">
         <h1 class="title mb-4">Thanh toán</h1>
-        <form class="row" id="checkoutForm">
+        <form class="row" method="POST" action="" id="checkoutForm">
             <div class="col-12 col-lg-7 col-xl-6">
                 <div class="card">
                     <div class="card-header">Thông tin giao hàng</div>
                     <div class="card-body">
                         <div class="mb-3">
                             <label for="email" class="form-label">Email address</label>
-                            <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" required>
+                            <input type="email" value="tinhpv10@fe.edu.vn" class="form-control" name="email" id="email" placeholder="name@example.com" required>
                         </div>
                         <div class="mb-3">
                             <label for="fullname" class="form-label">Họ và tên</label>
-                            <input type="text" class="form-control" name="fullname" id="fullname" placeholder="name@example.com">
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                            <input type="text" value="Phan Văn Tính" class="form-control" name="fullname" id="fullname" placeholder="name@example.com">
                         </div>
 
                     </div>
